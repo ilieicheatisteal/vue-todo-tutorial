@@ -1,6 +1,6 @@
 // ToDos.vue
 <template>
-  <div class="hintergrund">
+  <div class="backgroundextension">
   <div>
     <h1 class="headline">My To-Do-List <i class="fa-solid fa-list"></i></h1>
     <h3 class="marker"><p></p><i class="fa-solid fa-circle-info"></i>Click on task to cross it out</h3>
@@ -48,7 +48,7 @@ export default {
   width: 80%;
 }
 
-.hintergrund {
+backgroundextension {
   height: 100%;
   width: 100%;
   background-color: green;
