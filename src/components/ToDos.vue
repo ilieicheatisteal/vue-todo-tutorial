@@ -1,12 +1,15 @@
 // ToDos.vue
 <template>
+  <div class="hintergrund">
   <div>
-    <h1>Meine To-Do-Liste</h1>
+    <h1 class="headline">My To-Do-List <i class="fa-solid fa-list"></i></h1>
+    <h3 class="marker"><p></p><i class="fa-solid fa-circle-info"></i>Click on task to cross it out</h3>
     <ul>
       <li v-bind:key="`randomg-${item.id}`" v-for="item in todoEntries">
         <ToDoItem v-bind:todoItem="item" @delete-todo-event="deleteToDoItem"/>
       </li>
     </ul>
+  </div>
   </div>
 </template>
 
@@ -32,3 +35,22 @@ export default {
  },
 }
 </script>
+
+<style>
+.headline {
+  color: red;
+  font-family: "Comic Sans MS";
+  background-color: black;
+}
+
+.marker {
+  background-color: yellow;
+  width: 80%;
+}
+
+.hintergrund {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+</style>
