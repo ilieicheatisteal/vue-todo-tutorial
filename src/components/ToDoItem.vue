@@ -14,7 +14,6 @@ export default {
   props: {
     todoItem: {
       type: Object,
-      default: () => {}
     }
 },
   methods: {

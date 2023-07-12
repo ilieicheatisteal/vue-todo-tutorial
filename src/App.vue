@@ -1,8 +1,8 @@
 // App.vue
 <template>
   <div id="app">
-    <ToDos v-bind:todoEntries="todoEntries"/>
-    <AddToDoButton @add-todo-event="addToDoItem"/>
+    <ToDos v-bind:todoEntries="todoEntries" @delete-todo-event="deleteTodDoItem" />
+    <AddToDoButton @add-todo-event="addToDoItem" />
   </div>
 </template>
 
@@ -41,9 +41,11 @@ export default {
   methods: {
     addToDoItem(newToDoItem) {
       this.todoEntries.push(newToDoItem);
+    },
+
+    deleteTodDoItem(itemId) {
+      this.todoEntries = this.todoEntries.filter(item => item.id !== itemId);
     }
   },
 }
-
-
 </script>
