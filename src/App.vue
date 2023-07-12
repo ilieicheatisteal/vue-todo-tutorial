@@ -1,26 +1,49 @@
+// App.vue
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <ToDos v-bind:todoEntries="todoEntries"/>
+    <AddToDoButton @add-todo-event="addToDoItem"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ToDos from './components/ToDos'
+import AddToDoButton from "@/components/addToDoButton.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
-</script>
+    ToDos,
+    AddToDoButton
+  },
+  data() {
+    return {
+      todoEntries: [
+        {
+          id: 1,
+          title: 'Infos sammeln',
+          completed: false
+        },
+        {
+          id: 2,
+          title: 'Test Projekt erstellen',
+          completed: false
+        },
+        {
+          id: 3,
+          title: 'Blog Beitrag schreiben',
+          completed: false
+        },
+      ],
+    }
+  },
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  methods: {
+    addToDoItem(newToDoItem) {
+      this.todoEntries.push(newToDoItem);
+    }
+  },
 }
-</style>
+
+
+</script>
