@@ -1,11 +1,14 @@
 //AddToDoButton.vue
 <template>
+  <div class="background">
   <div>
     <form @submit="addToDo">
       <input type="text" v-model="title" name="title">
-      <button type="submit">Hinzufügen</button>
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i>Add</button>
     </form>
   </div>
+  </div>
+  <div class="background2"></div>
 </template>
 
 <script>
@@ -35,3 +38,11 @@ export default {
   }
 }
 </script>
+
+<style>
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+</style>

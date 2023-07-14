@@ -4,6 +4,7 @@
     <ToDos v-bind:todoEntries="todoEntries" @delete-todo-event="deleteTodDoItem" />
     <AddToDoButton @add-todo-event="addToDoItem" />
   </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </template>
 
 <script>
@@ -21,17 +22,17 @@ export default {
       todoEntries: [
         {
           id: 1,
-          title: 'Infos sammeln',
+          title: 'Gather information',
           completed: false
         },
         {
           id: 2,
-          title: 'Test Projekt erstellen',
+          title: 'Create a test project',
           completed: false
         },
         {
           id: 3,
-          title: 'Blog Beitrag schreiben',
+          title: 'Write a blog entry',
           completed: false
         },
       ],
@@ -49,3 +50,13 @@ export default {
   },
 }
 </script>
+
+<style>
+  template {
+    font-size: large;
+    background-color: black;
+    color: white;
+  }
+
+
+</style>

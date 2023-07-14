@@ -2,9 +2,10 @@
 <template>
   <div v-bind:class="{ 'completed' : todoItem.completed }">
     <p @click="markComplete">{{ todoItem.title }}</p>
-    <button @click="$emit('delete-todo-event', todoItem.id)">Löschen</button>
+    <button type="button" class="btn btn-danger" @click="$emit('delete-todo-event', todoItem.id)"> <i class="fa-solid fa-trash"></i>Delete</button>
   </div>
 </template>
+
 
 <script>
 
@@ -30,4 +31,7 @@ export default {
 .completed {
   text-decoration: line-through;
 }
+ template {
+   background-color: black;
+ }
 </style>
