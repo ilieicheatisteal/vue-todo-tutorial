@@ -1,10 +1,12 @@
 // App.vue
 <template>
-  <div id="app">
-    <ToDos v-bind:todoEntries="todoEntries" @delete-todo-event="deleteTodDoItem" />
-    <AddToDoButton @add-todo-event="addToDoItem" />
+  <div class="app">
+    <div class="headline1">
+      <h1 class="headline"><i class="bi bi-check-square-fill"></i>My Todo-s</h1></div>
+    <AddToDoButton @add-todo-event="addToDoItem"/>
+    <ToDos v-bind:todoEntries="todoEntries" @delete-todo-event="deleteTodDoItem"/>
+
   </div>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </template>
 
 <script>
@@ -22,17 +24,17 @@ export default {
       todoEntries: [
         {
           id: 1,
-          title: 'Gather information',
+          title: 'Buy groceries for next week',
           completed: false
         },
         {
           id: 2,
-          title: 'Create a test project',
+          title: 'Renew car insurance',
           completed: false
         },
         {
           id: 3,
-          title: 'Write a blog entry',
+          title: 'Sign up for online course',
           completed: false
         },
       ],
@@ -52,11 +54,19 @@ export default {
 </script>
 
 <style>
-  template {
-    font-size: large;
-    background-color: black;
-    color: white;
-  }
+
+
+.app {
+  width: 500px;
+  height: 100%;
+  background-color: lightgrey;
+  position: relative;
+  top: 30px;
+  left: 35%;
+  border-radius: 4px;
+  padding: 5px;
+  border: solid grey 2px;
+}
 
 
 </style>

@@ -2,7 +2,7 @@
 <template>
   <div v-bind:class="{ 'completed' : todoItem.completed }">
     <p @click="markComplete">{{ todoItem.title }}</p>
-    <button type="button" class="btn btn-danger" @click="$emit('delete-todo-event', todoItem.id)"> <i class="fa-solid fa-trash"></i>Delete</button>
+    <button type="button" class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="delete todo" @click="$emit('delete-todo-event', todoItem.id)"> <i class="bi bi-trash"></i></button>
   </div>
 </template>
 
