@@ -31,11 +31,30 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default {
   name: 'AddToDoButton',
+
+  // props: {},
+  // emits: {},
+
+  // setup(): Setup {},
   data() {
     return {
       title: ''
     }
   },
+
+  // computed: {},
+  // watch: {},
+
+  // beforeCreate() {},
+  // created() {},
+  // beforeMount() {},
+  // mounted() {},
+  // beforeUpdate() {},
+  // updated() {},
+  // activated() {},
+  // deactivated() {},
+  // beforeUnmount() {},
+  // unmounted() {},
   methods: {
     addToDo(event){
       event.preventDefault();
@@ -50,6 +69,7 @@ export default {
       this.title= '';
     }
   }
+  // render() {},
 }
 </script>
 

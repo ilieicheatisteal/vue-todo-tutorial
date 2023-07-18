@@ -3,6 +3,8 @@
   <div class="app">
     <div class="headline1">
       <h1 class="headline"><i class="bi bi-check-square-fill"></i>My Todo-s</h1></div>
+
+
     <AddToDoButton @add-todo-event="addToDoItem"/>
     <ToDos v-bind:todoEntries="todoEntries" @delete-todo-event="deleteTodDoItem"/>
 
@@ -19,6 +21,12 @@ export default {
     ToDos,
     AddToDoButton
   },
+
+  // props: {},
+  // emits: {},
+
+  // setup(): Setup {},
+
   data() {
     return {
       todoEntries: [
@@ -41,6 +49,20 @@ export default {
     }
   },
 
+  // computed: {},
+  // watch: {},
+
+  // beforeCreate() {},
+  // created() {},
+  // beforeMount() {},
+  // mounted() {},
+  // beforeUpdate() {},
+  // updated() {},
+  // activated() {},
+  // deactivated() {},
+  // beforeUnmount() {},
+  // unmounted() {},
+
   methods: {
     addToDoItem(newToDoItem) {
       this.todoEntries.push(newToDoItem);
@@ -50,6 +72,7 @@ export default {
       this.todoEntries = this.todoEntries.filter(item => item.id !== itemId);
     }
   },
+  // render() {},
 }
 </script>
 
@@ -67,6 +90,5 @@ export default {
   padding: 5px;
   border: solid grey 2px;
 }
-
 
 </style>

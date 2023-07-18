@@ -36,10 +36,10 @@ export default {
 
 <style>
 .headline {
-  color: cornflowerblue;
+  color: #186eff;
   font-family: "Arial";
   text-decoration: underline;
-  text-decoration-color: cornflowerblue;
+  text-decoration-color: #186eff;
   position: center;
 }
 
